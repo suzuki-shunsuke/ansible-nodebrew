@@ -1,2 +1,3 @@
 ---
 # vars file for nodebrew
+nodebrew_nonroot: "{{ (ansible_env.HOME == '/root') | ternary('no', 'yes') }}"
