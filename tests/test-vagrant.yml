@@ -1,0 +1,10 @@
+---
+- hosts: default
+  roles:
+    - role: ansible-nodebrew
+      nodebrew_users:
+      - vagrant
+  tasks:
+  - shell: PATH=/home/vagrant/.nodebrew/current/bin:$PATH nodebrew --version
+    register: result
+  - debug: var=result
