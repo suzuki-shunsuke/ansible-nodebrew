@@ -30,7 +30,8 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - { role: suzuki-shunsuke.nodebrew, nodebrew_users: ubuntu }
+  - role: suzuki-shunsuke.nodebrew
+    nodebrew_users: ubuntu
 ```
 
 License
