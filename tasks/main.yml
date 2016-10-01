@@ -4,11 +4,5 @@
   get_url: url=https://raw.githubusercontent.com/hokaccha/nodebrew/master/nodebrew dest=/tmp/ mode=0777
 - name: Execute the install script
   command: perl /tmp/nodebrew setup
-  become_user: "{{ item }}"
-  with_items: "{{ nodebrew_users }}"
-  when: "{{ nodebrew_users }}"
-- name: Execute the install script
-  command: perl /tmp/nodebrew setup
-  when: "{{ not nodebrew_users }}"
 - name: Remove the install script
   file: path=/tmp/nodebrew state=absent

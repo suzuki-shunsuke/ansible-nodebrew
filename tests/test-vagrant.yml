@@ -2,8 +2,6 @@
 - hosts: default
   roles:
   - role: ansible-nodebrew
-    nodebrew_users:
-    - vagrant
   tasks:
   - shell: PATH=$HOME/.nodebrew/current/bin:$PATH nodebrew --version
     register: result

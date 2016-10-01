@@ -7,6 +7,13 @@ Install nodebrew.
 
 https://galaxy.ansible.com/suzuki-shunsuke/nodebrew/
 
+Limitation
+-----------
+
+This role will install only on ssh's user.
+
+https://docs.ansible.com/ansible/become.html#becoming-an-unprivileged-user
+
 Requirements
 ------------
 
@@ -16,7 +23,6 @@ Requirements
 Role Variables
 --------------
 
-* nodebrew_users: Users who are Installed the nodebrew. The default value is the remote_user.
 * nodebrew_nonroot: Whether the remote_user is root or not. This variable is set automatically, and is used to execute tasks with the become option.
 
 Dependencies
@@ -31,7 +37,6 @@ Example Playbook
 - hosts: servers
   roles:
   - role: suzuki-shunsuke.nodebrew
-    nodebrew_users: ubuntu
 ```
 
 License

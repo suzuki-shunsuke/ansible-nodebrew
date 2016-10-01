@@ -3,8 +3,6 @@
   connection: local
   roles:
   - role: ansible-nodebrew
-    nodebrew_users:
-    - travis
   tasks:
   - shell: PATH=$HOME/.nodebrew/current/bin:$PATH nodebrew --version
     register: result
