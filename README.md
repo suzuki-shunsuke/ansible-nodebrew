@@ -36,7 +36,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - role: suzuki-shunsuke.nodebrew
+  - suzuki-shunsuke.nodebrew
 ```
 
 License

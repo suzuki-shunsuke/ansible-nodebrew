@@ -4,6 +4,10 @@
   roles:
   - role: ansible-nodebrew
   tasks:
-  - shell: PATH=$HOME/.nodebrew/current/bin:$PATH nodebrew --version
+  - shell: nodebrew --version
+    environment:
+      PATH: "{{ansible_env.HOME}}/.nodebrew/current/bin:{{ansible_env.PATH}}"
+    changed_when: false
     register: result
-  - debug: var=result
+  - debug:
+      var: result

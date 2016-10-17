@@ -12,7 +12,7 @@ addons:
     packages:
     - ansible
 
-before_install: cd tests
+before_script: cd tests
 
 script:
 - ansible-playbook test.yml
