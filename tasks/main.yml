@@ -1,8 +1,13 @@
 ---
 # tasks file for nodebrew
 - name: Download the install script
-  get_url: url=https://raw.githubusercontent.com/hokaccha/nodebrew/master/nodebrew dest=/tmp/ mode=0777
+  get_url:
+    url: https://raw.githubusercontent.com/hokaccha/nodebrew/master/nodebrew
+    dest: /tmp/
+    mode: 0777
 - name: Execute the install script
   command: perl /tmp/nodebrew setup
 - name: Remove the install script
-  file: path=/tmp/nodebrew state=absent
+  file:
+    path: /tmp/nodebrew
+    state: absent
